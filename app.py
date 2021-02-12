@@ -4,10 +4,10 @@ app = Flask(__name__)
 import time
 
 
-@app.route('/<float:size_mb>/<float:sleep_s>', methods=["POST", "GET"])
-def hello(size_mb, sleep_s):
-    print("sleeping", sleep_s)
-    time.sleep(sleep_s)
+@app.route('/<int:size_mb>/<int:sleep_ms>', methods=["POST", "GET"])
+def hello(size_mb, sleep_ms):
+    print("sleeping", sleep_ms)
+    time.sleep(sleep_ms/1000.)
     print("done sleeping, sending", size_mb)
     return "0"*int(size_mb*1024*1024)
 
