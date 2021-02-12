@@ -5,6 +5,7 @@ while true; do
     echo -e '\n\033[31m===\033[0m'
 
     echo "date: $(date)" 
+    echo "time: $(date +%s)" 
     echo "sleep_ms: $sleep_ms" 
     echo "size_mb: $size_mb" 
 
